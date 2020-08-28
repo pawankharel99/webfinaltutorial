@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 100vh;
+      background-color: rgba(128, 128, 128, 0.493);
+      padding: 2rem;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .tableDiv {
+      display: table;
+      margin-bottom: 1rem;
+    }
+
+    .cellSeperator {
+      display: table-cell;
+      width: 20px;
+    }
+
+    .cell1 {
+      display: table-cell;
+      width: 200px;
+      font-weight: 600;
+    }
+
+    .cell2 {
+      display: table-cell;
+      margin-left: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Student Registration Form</h1>
+    </div>
+
+    <!--  -->
+    <form name="myForm">
+      <div class="tableDiv">
+        <div class="cell1">First Name</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="text" name="fname" pattern="[A-Za-z]{3,}" placeholder="Enter first name here" maxlength="30"
+            required />(max 30
+          characters a-z and A-Z)
+        </div>
+      </div>
+      <div class="tableDiv">
+        <div class="cell1">Last Name</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="text" name="lname" pattern="[A-Za-z]{3,}" placeholder="Enter last name here" maxlength="30"
+            min="3" required />(max 30
+          characters a-z and A-Z)
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Date of Birth</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="date" placeholder="mm/dd/yyyy" required />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Email id</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter Email here"
+            required />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Mobile Number</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="tel" id="numb" pattern="[9]{1}[0-9]{9}" min placeholder="Enter mobile number here" required />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Gender</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          Male<input type="radio" id="male" name="gender" value="male" />
+          Female<input type="radio" id="female" name="gender" value="female" />
+          Others<input type="radio" id="other" name="gender" value="other" />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Address</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <textarea placeholder="Enter address here" rows="5" cols="30"></textarea>
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Hobbies</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          Travelling<input type="checkbox" name="hobbies" value="travelling" />
+          Singing<input type="checkbox" name="hobbies" value="singing" />
+          Dancing<input type="checkbox" name="hobbies" value="dancing" />
+          PLaying<input type="checkbox" name="hobbies" value="playing" />
+          <br />
+          Others<input type="text" placeholder="Enter here" attern="[A-Za-z]{3,}" />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Qualification</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <table>
+            <tr>
+              <td>
+                S.No.
+              </td>
+              <td>
+                Examination
+              </td>
+              <td>
+                Board
+              </td>
+              <td>
+                Percentage
+              </td>
+              <td>
+                Year of Passing
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                1
+              </td>
+              <td>
+                Class X
+              </td>
+              <td>
+                <input type="text" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="number" step="any" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="text" pattern="[2]{1}[0-9]{3}" placeholder="Enter here" maxlength="4" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                2
+              </td>
+              <td>
+                Class XII
+              </td>
+              <td>
+                <input type="text" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="number" step="any" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="text" pattern="[2]{1}[0-9]{3}" placeholder="Enter here" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                3
+              </td>
+              <td>
+                Graduation
+              </td>
+              <td>
+                <input type="text" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="number" step="any" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="text" pattern="[2]{1}[0-9]{3}" placeholder="Enter here" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                2
+              </td>
+              <td>
+                Masters
+              </td>
+              <td>
+                <input type="text" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="number" step="any" placeholder="Enter here" />
+              </td>
+              <td>
+                <input type="text" pattern="[2]{1}[0-9]{3}" placeholder="Enter here" />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Courses<br />Applied for</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          BE IT<input type="radio" value="be-it" name="course" /> BE ELX<input type="radio" value="be-elx"
+            name="course" />
+          BE COM<input type="radio" value="be-com" name="course" /> BE
+          SOFT<input type="radio" value="be-soft" name="course" />
+        </div>
+      </div>
+
+      <div class="tableDiv">
+        <div class="cell1">Date of Birth</div>
+        <div class="cellSeperator"></div>
+        <div class="cell2">
+          <input type="date" placeholder="mm/dd/yyyy" />
+        </div>
+      </div>
+      <button type="submit" >Submit</button>
+      <button type="reset">Reset</button>
+  </div>
+
+
+
+  </form>
+
+  <!-- 
+
+     -->
+</body>
+
+</html>

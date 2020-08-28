@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*document level comment*/
+        h1{
+            text-align: center;
+            font-family:Times New Roman ;
+        }
+        h2{
+            text-align: center;
+            font-family:Bodoni ;
+        }
+        h3{
+            text-align: center;
+            font-family:Garamond ;
+        }
+        h4{
+            text-align: center;
+            font-family:MS Arial ;
+        }
+        h5{
+            text-align: center;
+            font-family:MS Verdana ;
+        }
+        p{
+            text-align: center;
+        }
+        #container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #button{
+            border-radius: 5px;
+            height: 30px;
+            width: 70px;
+        }
+        #button:hover{
+            height: 40px;
+            width: 80px;
+            background-color: blue;
+        }
+        .window.alert{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>What are the five
+        generic fonts?</h1>
+    <h1>Times New Roman</h1>
+    <h2>Bodoni</h2>
+    <h3>Garamond</h3>
+    <h4>MS Arial</h4>
+    <h5>MS Verdana</h5>
+    <div id="container">
+    <p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="test_prime()" id="button">Try it</button>
+
+<p id="demo"></p>
+</div>
+    
+    <script src="prime.js"></script>
+</body>
+</html>

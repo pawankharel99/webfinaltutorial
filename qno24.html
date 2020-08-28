@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Answer of Q24</title>
+  </head>
+  <body style="text-align: center;">
+    <h1>What do you want to Buy ?</h1>
+
+    <form>
+      <input
+        type="checkbox"
+        value="59"
+        name="apple"
+        id="apple"
+        onclick="appleFun()"
+      />Apple (59 cents each)<br />
+      <input
+        type="checkbox"
+        value="49"
+        name="orange"
+        id="orange"
+        onclick="orangeFun()"
+      />Orange (49 cents each)<br />
+      <input
+        type="checkbox"
+        value="b39a"
+        name="banana"
+        id="banana"
+        onclick="bananaFun()"
+      />Banana (39 cents each)<br />
+
+      <button type="submit" onclick="myFun()">Submit</button>
+    </form>
+
+    <script>
+      var apple = 0;
+      var banana = 0;
+      var orange = 0;
+      var total_cost = 0;
+      myFun = function () {
+        event.preventDefault();
+        var totoal_cost = apple + orange + banana;
+        // alert("Your total cost is:" + " " + totoal_cost);
+        if (document.getElementById("apple").checked) {
+          apple = appleFun();
+        }
+        if (document.getElementById("banana").checked) {
+          banana = bananaFun();
+        }
+        if (document.getElementById("orange").checked) {
+          orange = orangeFun();
+        }
+        total = apple + orange + banana;
+        alert("Total cost:" + "$" + total);
+        return false;
+      };
+
+      appleFun = function () {
+        return 59;
+      };
+      orangeFun = function () {
+        return 49;
+      };
+      bananaFun = function () {
+        return 39;
+      };
+    </script>
+  </body>
+</html>
